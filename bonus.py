@@ -1,17 +1,19 @@
-
-def length():
-    print("How many years have you worked at the company? ")
-
-def salary():
-     print("What is your salary")
-
-
-def bonus(length, salary):
-    if  length > 10:
-        return
-    else:salary + salary * 0.05
-
+# Betelhem Alemu
+# 10/26/22
+def salary_calculator(longevity, current):
+    if longevity > 5:
+        salary = current + (current * 0.05)
+    else:
+        salary = current
+    return salary
 
 
 def main():
-    bonus()
+    longevity = int(input("How many years have you worked here:"))
+    current = int(input("What is your current salary:"))
+    final = salary_calculator(longevity, current)
+    print("salary is:", int(round(final)))
+
+
+
+main()
