@@ -46,10 +46,12 @@ This function will tell us who wins:
 def main():
     current = 0
     current = user_total(current)
-    print("Your total is,", user_total(current))
+    print("Your total is", current)
     users_choice = input("Would you like another card? Type yes or no")
     if users_choice == "yes":
-       get_card()
-    else: print("your total is", user_total(current))
+        card = current
+        print("Your total is", user_total(current) + card)
+    else:
+        print("your total is",  current)
 
 main()
